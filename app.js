@@ -7,9 +7,9 @@ const ejsMate = require("ejs-mate");
 const listing = require("./routes/listing.js");
 const reviews = require("./routes/review.js");
 const session = require('express-session');
-
+require('dotenv').config();
 // const MONGO_URL = "mongodb://127.0.0.1:27017/wanderlust";
-const MONGO_URL = "mongodb+srv://ashumaurya2511:ashutosh21@cluster0.kv1amsz.mongodb.net/"
+const MONGO_URL = process.env.MONGOOSE_URI;
 
 
 main()
